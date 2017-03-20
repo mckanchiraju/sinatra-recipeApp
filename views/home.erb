@@ -1,0 +1,13 @@
+<div class="row" style="padding-top: 40px">
+    <h3>List of Recipes: </h3>
+    
+    <% if @recipes.any? %>
+        <div class="list-group">
+            <% @recipes.each do |recipe| %>
+                <a href="/recipes/view/<%= recipe.id %>" class="list-group-item"> <%= recipe.name %> </a>
+            <% end %>
+        </div>
+    <% else %>
+        <p> No Recipes have been created yet!</p>
+    <% end %>
+</div>

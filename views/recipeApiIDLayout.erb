@@ -1,0 +1,13 @@
+[ { id: <%= @recipe.id %>, name: "<%= @recipe.name %>", food_type: "<%= @recipe.food_type %>", ingredients: "<%= @recipe.ingredients %>", directions: "<%= @recipe.directions %>", cook_time: "<%= @recipe.cook_time %>" } ]
+
+
+<% @recipes.each do |recipe| %>
+        {
+            id: <%= recipe.id %>, 
+            name: "<%= recipe.name %>", 
+            food_type: "<%= recipe.food_type %>", 
+            ingredients: "<%= recipe.ingredients %>", 
+            directions: "<%= recipe.directions %>", 
+            cook_time: "<%= recipe.cook_time %>" 
+        },
+    <% end %> 

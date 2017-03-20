@@ -1,0 +1,13 @@
+[ 
+    <% @recipes.each do |recipe| %>
+        <% @index = @index + 1 %>
+        <% if @index == @recipes.size %>
+            <%= "{ \"id\": #{recipe.id}, \"name\": \"#{recipe.name}\", \"food_type\": \"#{recipe.food_type}\", \"ingredients\": \"#{recipe.ingredients}\", 
+            \"directions\": \"#{recipe.directions}\", \"cook_time\": #{recipe.cook_time} } "%> 
+        <% else %>
+            <%= "{ \"id\": #{recipe.id}, \"name\": \"#{recipe.name}\", \"food_type\": \"#{recipe.food_type}\", \"ingredients\": \"#{recipe.ingredients}\", 
+            \"directions\": \"#{recipe.directions}\", \"cook_time\": #{recipe.cook_time} }, "%>        
+        <% end %>
+        
+    <% end %> 
+]
